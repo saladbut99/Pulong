@@ -1,0 +1,396 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 20, 2021 at 05:25 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `capstone`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activity_content`
+--
+
+CREATE TABLE `activity_content` (
+  `activity_content_id` int(5) NOT NULL,
+  `activity_question` varchar(100) COLLATE latin1_general_cs NOT NULL,
+  `activity_answer` varchar(100) COLLATE latin1_general_cs NOT NULL,
+  `activity_id` int(5) DEFAULT NULL,
+  `activity_answer_type` char(1) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activity_master`
+--
+
+CREATE TABLE `activity_master` (
+  `activity_id` int(5) NOT NULL,
+  `activity_name` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `activty_type` varchar(15) COLLATE latin1_general_cs NOT NULL,
+  `activity_instruction` varchar(255) COLLATE latin1_general_cs NOT NULL,
+  `lesson_content_id` int(5) DEFAULT NULL,
+  `activity_upload_date` datetime DEFAULT NULL,
+  `activity_perfect_score` tinyint(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` int(5) NOT NULL,
+  `admin_firstname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `admin_lastname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `admin_password` varchar(255) COLLATE latin1_general_cs NOT NULL,
+  `admin_username` varchar(30) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `choices`
+--
+
+CREATE TABLE `choices` (
+  `choices_id` int(5) NOT NULL,
+  `activity_content_id` int(5) DEFAULT NULL,
+  `choice` varchar(30) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lesson_content`
+--
+
+CREATE TABLE `lesson_content` (
+  `lesson_content_id` int(5) NOT NULL,
+  `discussion` varchar(21844) COLLATE latin1_general_cs NOT NULL,
+  `lesson_id` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lesson_example`
+--
+
+CREATE TABLE `lesson_example` (
+  `example_id` int(5) NOT NULL,
+  `lesson_content_id` int(5) DEFAULT NULL,
+  `example` varchar(21844) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lesson_master`
+--
+
+CREATE TABLE `lesson_master` (
+  `lesson_id` int(5) NOT NULL,
+  `lesson_name` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `lesson_description` varchar(255) COLLATE latin1_general_cs NOT NULL,
+  `year_level` varchar(10) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `media_activity`
+--
+
+CREATE TABLE `media_activity` (
+  `media_activity_id` int(5) NOT NULL,
+  `file_name` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `activity_content_id` int(5) DEFAULT NULL,
+  `file_targetDirectory` varchar(30) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `media_lesson`
+--
+
+CREATE TABLE `media_lesson` (
+  `media_lesson_id` int(5) NOT NULL,
+  `file_name` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `lesson_content_id` int(5) DEFAULT NULL,
+  `file_targetDirectory` varchar(30) COLLATE latin1_general_cs NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `performance_records`
+--
+
+CREATE TABLE `performance_records` (
+  `performance_id` int(5) NOT NULL,
+  `pupil_id` int(5) DEFAULT NULL,
+  `activity_score` int(100) NOT NULL,
+  `performed_activity_date` datetime DEFAULT NULL,
+  `activity_id` int(5) DEFAULT NULL,
+  `activity_retakes` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pupil`
+--
+
+CREATE TABLE `pupil` (
+  `pupil_id` int(5) NOT NULL,
+  `pupil_firstname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `pupil_middlename` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `pupil_lastname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `pupil_address` varchar(50) COLLATE latin1_general_cs NOT NULL,
+  `pupil_password` varchar(255) COLLATE latin1_general_cs NOT NULL,
+  `pupil_username` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `pupil_father_name` varchar(100) COLLATE latin1_general_cs NOT NULL,
+  `pupil_mother_name` varchar(100) COLLATE latin1_general_cs NOT NULL,
+  `pupil_guardian_name` varchar(100) COLLATE latin1_general_cs NOT NULL,
+  `section_id` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section`
+--
+
+CREATE TABLE `section` (
+  `section_id` int(5) NOT NULL,
+  `section_name` char(10) COLLATE latin1_general_cs NOT NULL,
+  `grade_level` int(5) NOT NULL,
+  `school_year` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacher`
+--
+
+CREATE TABLE `teacher` (
+  `teacher_id` int(5) NOT NULL,
+  `teacher_firstname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `teacher_lastname` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `teacher_password` varchar(255) COLLATE latin1_general_cs NOT NULL,
+  `teacher_username` varchar(30) COLLATE latin1_general_cs NOT NULL,
+  `section_id` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacher_lesson`
+--
+
+CREATE TABLE `teacher_lesson` (
+  `teacher_lesson_id` int(5) NOT NULL,
+  `lesson_id` int(5) DEFAULT NULL,
+  `teacher_id` int(5) DEFAULT NULL,
+  `lesson_upload_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_cs;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `activity_content`
+--
+ALTER TABLE `activity_content`
+  ADD PRIMARY KEY (`activity_content_id`),
+  ADD KEY `activity_id` (`activity_id`);
+
+--
+-- Indexes for table `activity_master`
+--
+ALTER TABLE `activity_master`
+  ADD PRIMARY KEY (`activity_id`),
+  ADD KEY `lesson_content_id` (`lesson_content_id`);
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+--
+-- Indexes for table `choices`
+--
+ALTER TABLE `choices`
+  ADD PRIMARY KEY (`choices_id`),
+  ADD KEY `activity_content_id` (`activity_content_id`);
+
+--
+-- Indexes for table `lesson_content`
+--
+ALTER TABLE `lesson_content`
+  ADD PRIMARY KEY (`lesson_content_id`),
+  ADD KEY `lesson_id` (`lesson_id`);
+
+--
+-- Indexes for table `lesson_example`
+--
+ALTER TABLE `lesson_example`
+  ADD PRIMARY KEY (`example_id`),
+  ADD KEY `lesson_content_id` (`lesson_content_id`);
+
+--
+-- Indexes for table `lesson_master`
+--
+ALTER TABLE `lesson_master`
+  ADD PRIMARY KEY (`lesson_id`);
+
+--
+-- Indexes for table `media_activity`
+--
+ALTER TABLE `media_activity`
+  ADD PRIMARY KEY (`media_activity_id`),
+  ADD KEY `activity_content_id` (`activity_content_id`);
+
+--
+-- Indexes for table `media_lesson`
+--
+ALTER TABLE `media_lesson`
+  ADD PRIMARY KEY (`media_lesson_id`),
+  ADD KEY `lesson_content_id` (`lesson_content_id`);
+
+--
+-- Indexes for table `performance_records`
+--
+ALTER TABLE `performance_records`
+  ADD PRIMARY KEY (`performance_id`),
+  ADD KEY `pupil_id` (`pupil_id`),
+  ADD KEY `activity_id` (`activity_id`);
+
+--
+-- Indexes for table `pupil`
+--
+ALTER TABLE `pupil`
+  ADD PRIMARY KEY (`pupil_id`),
+  ADD KEY `section_id` (`section_id`);
+
+--
+-- Indexes for table `section`
+--
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`section_id`);
+
+--
+-- Indexes for table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD PRIMARY KEY (`teacher_id`),
+  ADD KEY `section_id` (`section_id`);
+
+--
+-- Indexes for table `teacher_lesson`
+--
+ALTER TABLE `teacher_lesson`
+  ADD PRIMARY KEY (`teacher_lesson_id`),
+  ADD KEY `lesson_id` (`lesson_id`),
+  ADD KEY `teacher_id` (`teacher_id`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `activity_content`
+--
+ALTER TABLE `activity_content`
+  ADD CONSTRAINT `activity_content_ibfk_1` FOREIGN KEY (`activity_id`) REFERENCES `activity_master` (`activity_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `activity_master`
+--
+ALTER TABLE `activity_master`
+  ADD CONSTRAINT `activity_master_ibfk_1` FOREIGN KEY (`lesson_content_id`) REFERENCES `lesson_content` (`lesson_content_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `choices`
+--
+ALTER TABLE `choices`
+  ADD CONSTRAINT `choices_ibfk_1` FOREIGN KEY (`activity_content_id`) REFERENCES `activity_content` (`activity_content_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `lesson_content`
+--
+ALTER TABLE `lesson_content`
+  ADD CONSTRAINT `lesson_content_ibfk_1` FOREIGN KEY (`lesson_id`) REFERENCES `lesson_master` (`lesson_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `lesson_example`
+--
+ALTER TABLE `lesson_example`
+  ADD CONSTRAINT `lesson_example_ibfk_1` FOREIGN KEY (`lesson_content_id`) REFERENCES `lesson_content` (`lesson_content_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `media_activity`
+--
+ALTER TABLE `media_activity`
+  ADD CONSTRAINT `media_activity_ibfk_1` FOREIGN KEY (`activity_content_id`) REFERENCES `activity_content` (`activity_content_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `media_lesson`
+--
+ALTER TABLE `media_lesson`
+  ADD CONSTRAINT `media_lesson_ibfk_1` FOREIGN KEY (`lesson_content_id`) REFERENCES `lesson_content` (`lesson_content_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `performance_records`
+--
+ALTER TABLE `performance_records`
+  ADD CONSTRAINT `performance_records_ibfk_1` FOREIGN KEY (`pupil_id`) REFERENCES `pupil` (`pupil_id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `performance_records_ibfk_2` FOREIGN KEY (`activity_id`) REFERENCES `activity_master` (`activity_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `pupil`
+--
+ALTER TABLE `pupil`
+  ADD CONSTRAINT `pupil_ibfk_1` FOREIGN KEY (`section_id`) REFERENCES `section` (`section_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD CONSTRAINT `teacher_ibfk_1` FOREIGN KEY (`section_id`) REFERENCES `section` (`section_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `teacher_lesson`
+--
+ALTER TABLE `teacher_lesson`
+  ADD CONSTRAINT `teacher_lesson_ibfk_1` FOREIGN KEY (`lesson_id`) REFERENCES `lesson_master` (`lesson_id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `teacher_lesson_ibfk_2` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`teacher_id`) ON DELETE SET NULL;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
