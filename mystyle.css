@@ -6,11 +6,32 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body{
-  background-color: #0d98ba;
-  padding: 0 10px;
+h1{
+  color:white;
+  font-size: 100px;
 }
 
-h1{
-  color:red;
+
+.bg {
+  background-image: url("Banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 500px
+}
+.button{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  transition: all 0.3s ease 0s;
+  border: 5px solid #59CF02;
+  background: none;
+  color:  white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.button:hover{
+background-color: #59CF02;
+color:white;
 }
