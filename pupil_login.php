@@ -12,16 +12,18 @@
     <center>
     <div class="formcontainer" style="max-width:70%;">
       <div class="container h-100">
+          <h1><b>Pupil Login</b></h1>
+          <br><br>
         <div class="row h-100 align-items-center">
-              <h1><b>Pupil Login</b></h1>
+
                 <div class="col-md text-center">
-                      <h1 style="font-size:20px;"><b>Pupil</b></h1>
+                      <a href="pupil_login.php" class="login_a" style="font-size:30px; color: #59CF02;"><b>Pupil</b></a>
                 </div>
                 <div class="col-md text-center">
-                      <h1 style="font-size:20px;"><b>Teacher</b></h1>
+                      <a href="pupil_login.php" class="login_a" style="font-size:30px;"><b>Teacher</b></a>
                 </div>
                 <div class="col-md text-center">
-                      <h1 style="font-size:20px;"><b>Admin</b></h1>
+                      <a href="pupil_login.php" class="login_a" style="font-size:30px;"><b>Admin</b></a>
                 </div>
           </div>
         </div>
