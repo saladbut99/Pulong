@@ -20,6 +20,7 @@ h1{
   height: 100vh;
   min-height: 500px;
 }
+
 .button{
   width: 100%;
   padding: 8px 10px;
@@ -34,4 +35,12 @@ h1{
 .button:hover{
 background-color: #59CF02;
 color:white;
+}
+.formcontainer{
+  background-color: black;
+  width: 100%;
+  border: 2px solid green;
+   border-radius: 25px;
+   margin-top: 10%;
+
 }
