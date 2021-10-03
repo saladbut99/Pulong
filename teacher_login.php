@@ -18,7 +18,7 @@
               <a href="index.html" class="login_a">Back</a>
           </div>
           <div class="col-6 text-center">
-              <h1><b>Pupil Login</b></h1>
+              <h1><b>Teacher Login</b></h1>
           </div>
         </div>
         <br>
@@ -26,14 +26,14 @@
 
                 <div class="col-md text-center">
 
-                      <a href="pupil_login.php"><img src="website/student_logo.png" class="login_image" style="border: 5px solid #59CF02;"></a>
+                      <a href="pupil_login.php"><img src="website/student_logo.png" class="login_image"></a>
                       <br>
-                      <h1 href="pupil_login.php" style="font-size:30px; color: #59CF02;"><b>Pupil</b></h1>
+                      <h1 href="pupil_login.php" style="font-size:30px;"><b>Pupil</b></h1>
                 </div>
                 <div class="col-md text-center">
-                      <a href="teacher_login.php"><img src="website/teacher.png" class="login_image" alt=""></a>
+                      <a href="teacher_login.php"><img src="website/teacher.png" class="login_image" alt="" style="border: 5px solid #59CF02;"></a>
                       <br>
-                      <h1 href="pupil_login.php" style="font-size:30px;"><b>Teacher</b></h1>
+                      <h1 href="pupil_login.php" style="font-size:30px;color: #59CF02;"><b>Teacher</b></h1>
                 </div>
                 <div class="col-md text-center">
                       <a href="admin_login.php"><img src="website/admin.png" class="login_image" alt=""></a>
