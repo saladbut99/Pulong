@@ -10,21 +10,57 @@
   </head>
   <body>
     <center>
-    <div class="formcontainer" style="max-width:70%;">
+    <div class="formcontainer m-5 pb-5" style="max-width:70%;">
       <div class="container h-100">
-          <h1><b>Pupil Login</b></h1>
-          <br><br>
+        <br>
+        <div class="row h-100 align-items-center">
+          <div class="col-3 text-center">
+              <a href="index.html" class="login_a">Back</a>
+          </div>
+          <div class="col-6 text-center">
+              <h1><b>Pupil Login</b></h1>
+          </div>
+        </div>
+        <br>
         <div class="row h-100 align-items-center">
 
                 <div class="col-md text-center">
-                      <a href="pupil_login.php" class="login_a" style="font-size:30px; color: #59CF02;"><b>Pupil</b></a>
+
+                      <a href="pupil_login.php"><img src="website/student_logo.png" class="login_image" style="border: 5px solid #59CF02;"></a>
+                      <br>
+                      <h1 href="pupil_login.php" style="font-size:30px; color: #59CF02;"><b>Pupil</b></h1>
                 </div>
                 <div class="col-md text-center">
-                      <a href="pupil_login.php" class="login_a" style="font-size:30px;"><b>Teacher</b></a>
+                      <a href="pupil_login.php"><img src="website/teacher.png" class="login_image" alt=""></a>
+                      <br>
+                      <h1 href="pupil_login.php" style="font-size:30px;"><b>Teacher</b></h1>
                 </div>
                 <div class="col-md text-center">
-                      <a href="pupil_login.php" class="login_a" style="font-size:30px;"><b>Admin</b></a>
+                      <a href="pupil_login.php"><img src="website/admin.png" class="login_image" alt=""></a>
+                      <br>
+                      <h1 href="pupil_login.php" style="font-size:30px;"><b>Admin</b></h1>
                 </div>
+          </div>
+          <br><br><br>
+          <div class="row h-100 align-items-center">
+            <div class="col-md text-center">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                  <div class="form">
+                    <span class="error"><?php// echo $mainErr;?></span>
+                    <div class="input_field">
+                      <input  type="text" name="email" class="input" placeholder="Username">
+                    </div>
+                    <span class="error"><?php //echo $emailErr;?></span>
+                    <div class="input_field">
+                      <input  type="password" name="password"class="input" placeholder="Password">
+                    </div>
+                    <span class="error"><?php// echo $passwordErr;?></span>
+                    <center>
+                      <div class="input_field" style="width:30%;">
+                        <input type="submit" name="Submit" target="_self" class="button">
+                      </div>
+                    </center>
+            </div>
           </div>
         </div>
       </div>
