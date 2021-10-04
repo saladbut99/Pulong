@@ -37,8 +37,7 @@ background-color: #59CF02;
 color:white;
 }
 .formcontainer{
-  background-image:   linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('website/Banner.png');
-  background-color: black;
+  background-color: rgba(0,0,0,.8);
   width: 100%;
   border: 3px solid #59CF02;
    border-radius: 25px;
@@ -101,6 +100,7 @@ transition: all 0.3 ease;
 .login_image{
   width: 200px;
   border-radius: 100%;
+  border: 1px solid rgba(105, 105, 105, 0.1)
 }
 .login_image:hover{
   border: 5px solid #00acee;
