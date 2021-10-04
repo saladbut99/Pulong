@@ -37,9 +37,9 @@ background-color: #59CF02;
 color:white;
 }
 .formcontainer{
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.7);
   width: 100%;
-  border: 3px solid #59CF02;
+  border: 3px solid #00acee;
    border-radius: 25px;
 
 }
