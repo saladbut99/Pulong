@@ -37,9 +37,10 @@ background-color: #59CF02;
 color:white;
 }
 .formcontainer{
+  background-image:   linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('website/Banner.png');
   background-color: black;
   width: 100%;
-  border: 2px solid green;
+  border: 3px solid #59CF02;
    border-radius: 25px;
 
 }
