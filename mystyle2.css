@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap');
+*{
+  margin:0px;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  color:white;
+  font-size: 100px;
+}
+
+.bg {
+  background-image:   linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('website/Banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 500px;
+}
+
+.whitebg{
+  height: 100vh;
+  min-height: 500px;
+}
+
+.button{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  transition: all 0.3s ease 0s;
+  border: 5px solid #59CF02;
+  background: none;
+  color:  white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.button:hover{
+background-color: #59CF02;
+color:white;
+transition: 1s;
+}
+
+a :hover{
+  font-size: 85px;
+  transition: .2s;
+  text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000;
+
+}
+
+.formcontainer{
+  background-color: rgba(0,0,0,.9);
+  border: 3px solid #00acee;
+  padding: 10px;
+  width: 50%;
+   border-radius: 25px;
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   transform: translate(50%,10%);
+  display: none;
+}
+
+
+.formp{
+  width: 100%;
+  display: block;
+}
+.formp .input_field{
+  margin-bottom: 4%;
+  align-items: center;
+}
+.formp .input_field label{
+  width: 170px;
+  color: black;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.formp .input_field .input{
+width: 70%;
+height: 60px;
+outline: none;
+border-radius: 20px;
+border:1px solid grey;
+font-size: 20px;
+padding: 8px 10px;
+transition: all 0.3 ease;
+}
+
+.formp .input_field .input:focus{
+border: 3px solid  #59CF02;
+border-radius: 20px;
+transition: all 0.3 ease;
+}
+.formp .input_field .button{
+  width: 50%;
+  height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+  border: 2px solid   #59CF02;
+  background: black;
+  color:  white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.formp .input_field .button:hover{
+  background: #59CF02;
+  color: white;
+  transition: .2s;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000;
+  border: 1px solid white;
+}
+
+.login_a{
+  text-decoration: none;
+  padding: 16px;
+  margin-right: 5px;
+  color:white;
+    transition: all 0.3s ease 0s;
+}
+.login_a:hover{
+  color:#00acee;
+}
+.login_image{
+  width: 200px;
+  border-radius: 100%;
+  border: 1px solid rgba(105, 105, 105, 0.1);
+}
+.login_image:hover{
+  border: 5px solid #00acee;
+    transition: all 0.3s ease 0s;
+}
+
+
+.formt{
+  width: 100%;
+  display: none;
+}
+
+.formt .input_field{
+  margin-bottom: 4%;
+  align-items: center;
+}
+.formt .input_field label{
+  width: 170px;
+  color: black;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.formt .input_field .input{
+width: 70%;
+height: 60px;
+outline: none;
+border-radius: 20px;
+border:1px solid grey;
+font-size: 20px;
+padding: 8px 10px;
+transition: all 0.3 ease;
+}
+
+.formt .input_field .input:focus{
+border: 3px solid  #59CF02;
+border-radius: 20px;
+transition: all 0.3 ease;
+}
+.formt .input_field .button{
+  width: 50%;
+  height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+  border: 2px solid   #59CF02;
+  background: black;
+  color:  white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.formt .input_field .button:hover{
+  background: #59CF02;
+  color: white;
+  transition: .2s;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000;
+  border: 1px solid white;
+}
+
+.forma{
+  width: 100%;
+  display: none;
+}
+
+.forma .input_field{
+  margin-bottom: 4%;
+  align-items: center;
+}
+.forma .input_field label{
+  width: 170px;
+  color: black;
+  margin-right: 10px;
+  font-size: 17px;
+}
+.forma .input_field .input{
+width: 70%;
+height: 60px;
+outline: none;
+border-radius: 20px;
+border:1px solid grey;
+font-size: 20px;
+padding: 8px 10px;
+transition: all 0.3 ease;
+}
+
+.forma .input_field .input:focus{
+border: 3px solid  #59CF02;
+border-radius: 20px;
+transition: all 0.3 ease;
+}
+.forma .input_field .button{
+  width: 50%;
+  height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+  border: 2px solid   #59CF02;
+  background: black;
+  color:  white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.forma .input_field .button:hover{
+  background: #59CF02;
+  color: white;
+  transition: .2s;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000;
+  border: 1px solid white;
+}
