@@ -26,6 +26,7 @@ h1{
 }
 
 .button{
+  white-space: nowrap;
   width: 100%;
   padding: 8px 10px;
   font-size: 15px;
@@ -62,6 +63,7 @@ a :hover{
 .formcontainer .form .input_field{
   margin-bottom: 4%;
   align-items: center;
+  width: 100%;
 }
 .formcontainer .form .input_field label{
   width: 170px;
@@ -86,7 +88,7 @@ border-radius: 20px;
 transition: all 0.3 ease;
 }
 .formcontainer .form .input_field .button{
-  width: 50%;
+  width: 35%;
   height: 60px;
   font-size: 20px;
   transition: all 0.3s ease 0s;

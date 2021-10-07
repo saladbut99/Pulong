@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   </head>
-  <body>
-  <div class="bg">
+  <body id="body">
+  <div class="bg" id="content_dark1">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-md text-center">
@@ -19,7 +19,7 @@
 
         </div>
         <div class="col-md text-center">
-            <a href="#" class="button text-decoration-none" style="font-size:80px;" onclick="show()"><b>Log In</b></a>
+            <a href="#" class="button text-decoration-none" id="greyButton" style="font-size:80px;" onclick="show()"><b>Log In</b></a>
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@
 
   <br><br>
 
-<div class="whitebg">
+<div class="whitebg" id="content_dark2">
   <div class="container h-50">
     <div class="row h-100 align-items-center">
       <div class="col-md text-center">
@@ -59,23 +59,31 @@
 
 
 <!-- For Login Form -->
-<div class="formcontainer mh-100 mw-100 " id="loginas">
-  <div class="logocontainer d-flex justify-content-around text-center">
-    <div class="pupil">
+<div class="formcontainer " id="loginas" style="overflow-y:auto;  max-height: calc(115vh - 210px);"> 
+  <div class="container h-500">
+    <div class="row h-100 align-items-center">
+      <div class="col-md">
+        <a href="#" class="login_a" onclick="hide()">Back</a>
+      </div>
+    </div>
+    <br><br>
+    <div class="row h-100 align-items-center">
+    <div class="pupil col-md text-center">
           <a href="#" ><img id="logopupil" onclick="p()" onclick="showt()" src="website/student_logo.png" class="login_image img-fluid" style="border: 5px solid #59CF02;"></a>
           <br>
           <h1 href="#" style="font-size:30px; color: #59CF02;" id="h1pupil"><b>Pupil</b></h1>
     </div>
-    <div class="teacher">
+    <div class="teacher col-md text-center">
           <a href="#"><img id="logoteacher" onclick="t()" src="website/teacher.png" class="login_image img-fluid" alt=""></a>
           <br>
           <h1 href="#" style="font-size:30px;" id="h1teacher"><b>Teacher</b></h1>
     </div>
-    <div class="admin">
-          <a href="#" ><img id="logoadmin" onclick="a()" src="website/admin.png" class="login_image img-fluid" alt="" "></a>
+    <div class="admin col-md text-center">
+          <a href="#" ><img id="logoadmin" onclick="a()" src="website/admin.png" class="login_image img-fluid" alt=""></a>
           <br>
           <h1 href="#" style="font-size:30px;" id="h1admin"><b>Admin</b></h1>
     </div>
+  </div>
   </div>
 
 <!-- actual form for pupil-->
@@ -93,8 +101,8 @@
       </div>
       <span class="error"><?php// echo $passwordErr;?></span>
       <center>
-        <div class="input_field" style="width:30%;">
-          <a href="#" class="login_a button" onclick="hide()">Back</a>
+        <div class="input_field" style="width:55%;">
+          
           <input type="submit" name="Submit" target="_self" class="button">
         </div>
       </center>
@@ -116,8 +124,8 @@
         </div>
         <span class="error"><?php// echo $passwordErr;?></span>
         <center>
-          <div class="input_field" style="width:30%;">
-            <a href="#" class="login_a button" onclick="hide()">Back</a>
+          <div class="input_field" style="width:55%;">
+            
             <input type="submit" name="Submit" target="_self" class="button">
           </div>
         </center>
@@ -141,8 +149,8 @@
           </div>
           <span class="error"><?php// echo $passwordErr;?></span>
           <center>
-            <div class="input_field" style="width:30%;">
-              <a href="#" class="login_a button" onclick="hide()">Back</a>
+            <div class="input_field" style="width:55%;">
+              
               <input type="submit" name="Submit" target="_self" class="button">
             </div>
           </center>
@@ -161,9 +169,17 @@
 <script>
   function show(){
     document.getElementById("loginas").style.display = "block";
+    document.getElementById("body").style.overflow = "hidden";
+    document.getElementById("content_dark1").style.filter = "brightness(50%)";
+    document.getElementById("content_dark2").style.filter = "brightness(50%)";
+   
   }
   function hide(){
     document.getElementById("loginas").style.display = "none";
+    document.getElementById("body").style.overflow = "auto";
+    document.getElementById("content_dark1").style.filter = "brightness(100%)";
+    document.getElementById("content_dark2").style.filter = "brightness(100%)";
+    
   }
 
   function p(){
