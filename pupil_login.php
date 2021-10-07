@@ -22,7 +22,7 @@
           </div>
         </div>
         <br>
-        <div class="row h-100 align-items-center">
+          <div class="row h-100 align-items-center">
 
                 <div class="col-md text-center">
 
@@ -56,7 +56,7 @@
                     </div>
                     <span class="error"><?php// echo $passwordErr;?></span>
                     <center>
-                      <div class="input_field" style="width:30%;">
+                      <div class="input_field" >
                         <input type="submit" name="Submit" target="_self" class="button">
                       </div>
                     </center>
