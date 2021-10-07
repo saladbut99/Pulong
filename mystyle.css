@@ -119,3 +119,26 @@ transition: all 0.3 ease;
   border: 5px solid #00acee;
     transition: all 0.3s ease 0s;
 }
+
+
+.navbar{
+  background: url(banner.png);
+}
+
+.nav b{
+  color: white;
+  padding-left: 20px;
+}
+
+.section1{
+  background-color: #03256C;
+  height: 80vh;
+  width: 70%;
+  margin-inline: auto;
+  margin-top: 20px;
+}
+
+.section1child{
+  height: 60vh;
+}
+
