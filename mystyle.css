@@ -125,6 +125,7 @@ transition: all 0.3 ease;
 
 .navbar{
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(banner.png);
+  margin-bottom: 7%;
 }
 
 .nav b{
@@ -133,11 +134,14 @@ transition: all 0.3 ease;
 }
 
 .section1{
-  background-color: #03256C;
   height: 80vh;
   width: 70%;
   margin-inline: auto;
-  margin-top: 20px;
+  margin-bottom: 10%;
+ 
+}
+.content{
+  border: 1px solid black;
 }
 
 .section1child{
@@ -162,4 +166,15 @@ transition: all 0.3 ease;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+.dashboard_div{
+  border:3px solid #00acee;
+  margin-bottom: 2%;
+  border-radius: 5%;
+}
+
+.nav_img{
+  border-radius: 100%;
+  border: 3px solid white;
 }
