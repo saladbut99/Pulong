@@ -124,7 +124,7 @@ transition: all 0.3 ease;
 
 
 .navbar{
-  background: url(banner.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(banner.png);
 }
 
 .nav b{
@@ -144,3 +144,22 @@ transition: all 0.3 ease;
   height: 60vh;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
