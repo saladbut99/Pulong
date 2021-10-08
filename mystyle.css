@@ -172,6 +172,8 @@ transition: all 0.3 ease;
   border:3px solid #00acee;
   margin-bottom: 2%;
   border-radius: 5%;
+  background-color: #fafdf3;
+  max-height: 90%;
 }
 
 .nav_img{
