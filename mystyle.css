@@ -43,7 +43,7 @@ color:white;
 transition: 1s;
 }
 
-a :hover{
+.loginbutton a :hover{
   font-size: 85px;
   transition: .2s;
   text-shadow: 0px 0px 5px #000000, 0px 0px 5px #000000;
