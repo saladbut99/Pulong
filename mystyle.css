@@ -194,3 +194,10 @@ transition: all 0.3 ease;
 .registerbutton:hover{
   color: white;
 }
+
+.backbutton svg:hover{
+  border-radius: 5px;
+  background: rgb(160, 157, 157);
+  color: rgb(255, 255, 255);
+  transform: scale(1.2);
+}
