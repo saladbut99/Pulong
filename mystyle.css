@@ -132,6 +132,15 @@ transition: all 0.3 ease;
   color: white;
   padding-left: 20px;
 }
+.section{
+  transition: 0s background;
+}
+
+.section:hover{
+  background-color: rgba(3, 37, 108, .9);
+  color: white;
+  transition: all ease-in .3s;
+}
 
 .section1{
   height: 80vh;
