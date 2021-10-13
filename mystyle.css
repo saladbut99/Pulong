@@ -217,6 +217,12 @@ transition: all 0.3 ease;
   transform: scale(1.2);
 }
 
+.backbuttonpos{
+  position: absolute;
+  top: 15%;
+  left: 2%;
+}
+
 .menu{
   background: rgb(255, 255, 255);
   height: 16vh;
