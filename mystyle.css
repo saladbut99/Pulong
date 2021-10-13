@@ -147,7 +147,7 @@ transition: all 0.3 ease;
   width: 70%;
   margin-inline: auto;
   margin-bottom: 10%;
- 
+
 }
 .content{
   border: 1px solid black;
@@ -164,17 +164,17 @@ transition: all 0.3 ease;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 .dashboard_div{
@@ -182,6 +182,7 @@ transition: all 0.3 ease;
   margin-bottom: 2%;
   border-radius: 5%;
   background-color: #fafdf3;
+  height: auto;
   max-height: 90%;
 }
 
