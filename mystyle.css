@@ -201,3 +201,30 @@ transition: all 0.3 ease;
   color: rgb(255, 255, 255);
   transform: scale(1.2);
 }
+
+.menu{
+  background: rgb(255, 255, 255);
+  height: 16vh;
+  width: 12vw;
+  border: 1px solid black;
+  border-radius: 10px 0px 10px 10px;
+  position: absolute;
+  top: 14%;
+  right: 3%;
+  color: #1d1d1d;
+  display: none;
+}
+
+.menu::before{
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 12px;
+  right: 13px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  z-index: 1;
+}
