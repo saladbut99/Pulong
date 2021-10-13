@@ -20,6 +20,19 @@ h1{
   min-height: 500px;
 }
 
+.bg{
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {background-size: 105%;}
+  50% {background-size: 100%; background-position-y: bottom; background-position-x: left;}
+  100%  {background-size: 105%;}
+}
+
+
 .whitebg{
   height: 100vh;
   min-height: 500px;
@@ -136,7 +149,7 @@ transition: all 0.3 ease;
   transition: 0s background;
 }
 
-.section:hover{
+.section:hover {
   background-color: rgba(3, 37, 108, .9);
   color: white;
   transition: all ease-in .3s;
