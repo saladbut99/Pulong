@@ -18,6 +18,7 @@ h1{
   background-size: cover;
   height: 100vh;
   min-height: 500px;
+  background-attachment: fixed;
 }
 
 .bg{
@@ -27,9 +28,9 @@ h1{
 }
 
 @keyframes example {
-  0% {background-size: 105%;}
-  50% {background-size: 100%; background-position-y: bottom; background-position-x: left;}
-  100%  {background-size: 105%;}
+  0% {background-size:220vh; }
+  50% {background-size:210vh; background-position-y: top;}
+  100%  {background-size:220vh;}
 }
 
 
