@@ -37,6 +37,18 @@ h1{
 .whitebg{
   height: 100vh;
   min-height: 500px;
+  transition: all 1s ease;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .button{
